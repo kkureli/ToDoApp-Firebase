@@ -1,0 +1,35 @@
+.notifications {
+    position: absolute;
+    top: 80px;
+    right: 10px;
+}
+
+.section {
+    /* display: block; */
+    overflow-y: scroll;
+}
+
+@media (max-width: 684px) {
+    .section {
+        /* display: block; */
+        position: absolute;
+        left: -650px;
+        width: 100vh;
+        height: 20vh !important;
+        overflow-y: scroll;
+    }
+    .not-title {
+        display: none !important;
+    }
+    .notUL {
+        height: 0;
+        top: 0;
+        left: 100px;
+        position: absolute;
+    }
+    .notCard {
+        height: 50vh !important;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+}

@@ -1,0 +1,5 @@
+@media (min-width: 690px) and (max-width: 1245px) {
+    .nameField {
+        margin-left: 43px !important;
+    }
+}
