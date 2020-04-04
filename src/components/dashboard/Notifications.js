@@ -5,9 +5,10 @@ const Notifications = (props) => {
 
   return (
     <div
-      className="section mb-0 pb-0"
+      className="section"
       style={{
         height: "580px",
+
         backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
 

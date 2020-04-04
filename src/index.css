@@ -4,7 +4,6 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
 }
 
 body {
@@ -62,7 +61,7 @@ input[type="password"]:not(.browser-default):focus:not([readonly])+label {
     visibility: visible;
 }
 
-@media (min-width: 684px) and (max-width: 894px) {
+@media (min-width: 684px) and (max-width: 977px) {
     .dashboard {
         position: absolute;
         left: -30px;
@@ -71,6 +70,6 @@ input[type="password"]:not(.browser-default):focus:not([readonly])+label {
 
 @media (max-width: 684px) {
     .dashboard {
-        margin-top: 70px;
+        margin-top: 80px;
     }
 }
