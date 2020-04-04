@@ -6,16 +6,16 @@ import { Redirect } from "react-router-dom";
 export class SignIn extends Component {
   state = {
     email: "",
-    password: ""
+    password: "",
   };
 
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState({
-      [e.target.id]: e.target.value
+      [e.target.id]: e.target.value,
     });
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
     this.props.signIn(this.state);
   };
@@ -26,7 +26,7 @@ export class SignIn extends Component {
 
     return (
       <div className="container">
-        <form onSubmit={e => this.handleSubmit(e)} className="white">
+        <form onSubmit={(e) => this.handleSubmit(e)} className="white">
           <h5 className="grey-text text-darken-3">SignIn</h5>
           <div className="input-field">
             <label htmlFor="email">Email</label>
@@ -34,7 +34,7 @@ export class SignIn extends Component {
               required
               type="email"
               id="email"
-              onChange={e => this.handleChange(e)}
+              onChange={(e) => this.handleChange(e)}
             />
           </div>
           <div className="input-field">
@@ -43,7 +43,7 @@ export class SignIn extends Component {
               required
               type="password"
               id="password"
-              onChange={e => this.handleChange(e)}
+              onChange={(e) => this.handleChange(e)}
             />
           </div>
           <div className="input-field">
@@ -58,18 +58,16 @@ export class SignIn extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  console.log("statesws", state);
-
+const mapStateToProps = (state) => {
   return {
     authError: state.auth.authError,
-    auth: state.firebase.auth
+    auth: state.firebase.auth,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    signIn: creds => dispatch(signIn(creds))
+    signIn: (creds) => dispatch(signIn(creds)),
   };
 };
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {
   updateUserTask,
-  updateDone
+  updateDone,
 } from "../../store/actions/userTaskActions";
 import moment from "moment";
 import uuid from "react-uuid";
@@ -13,7 +13,7 @@ import Checkbox from "./Checkbox";
 class TableData extends Component {
   state = {
     task: "",
-    until: ""
+    until: "",
   };
 
   render() {
@@ -41,7 +41,6 @@ class TableData extends Component {
       let editBtn = document.getElementById(editBtnId);
       editBtn.classList.remove("hidden");
       let span = document.getElementById(spanId);
-      // console.log("oo", span.innerText);
 
       span.contentEditable = "false";
       let date = document.getElementById(dateId).innerText;
@@ -67,7 +66,6 @@ class TableData extends Component {
       let taskSpan = document.getElementById(taskSpanId).innerText;
 
       let obj = { task: taskSpan, until: span.innerText }; //state asynchrous calistigi icin ilk seferinde state bos guncelliyordu. oyuzden obj de tuttum
-      // console.log("oo", this.state);
 
       this.props.updateUserTask(obj, taskId);
     };
@@ -82,7 +80,7 @@ class TableData extends Component {
     return (
       <>
         {tasks &&
-          tasks.map(task => {
+          tasks.map((task) => {
             let taskSpanId = uuid();
             let doneBtnId = uuid();
             let editBtnId = uuid();
@@ -169,7 +167,7 @@ class TableData extends Component {
 
                   <td>{moment(task.createdAt.toDate()).calendar()}</td>
                   <td>
-                    <Button onClick={e => deleteHandler(e, task.id)}>
+                    <Button onClick={(e) => deleteHandler(e, task.id)}>
                       <i
                         style={{ color: "red" }}
                         class="fas fa-trash-alt fa-lg"
@@ -185,11 +183,11 @@ class TableData extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    deleteTask: id => dispatch(deleteUserTask(id)),
+    deleteTask: (id) => dispatch(deleteUserTask(id)),
     updateUserTask: (taskObj, id) => dispatch(updateUserTask(taskObj, id)),
-    updateDone: (doneObj, id) => dispatch(updateDone(doneObj, id))
+    updateDone: (doneObj, id) => dispatch(updateDone(doneObj, id)),
   };
 };
 

@@ -100,8 +100,6 @@ class MyToDo extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log("yes", state);
-
   return {
     userTasks: state.firestore.ordered.userTasks,
     auth: state.firebase.auth,

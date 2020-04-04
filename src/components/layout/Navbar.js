@@ -30,12 +30,10 @@ function Navbar(props) {
   );
 }
 
-const mapStateToProps = state => {
-  console.log("state", state);
-
+const mapStateToProps = (state) => {
   return {
     auth: state.firebase.auth,
-    authError: state.auth.authError
+    authError: state.auth.authError,
   };
 };
 
