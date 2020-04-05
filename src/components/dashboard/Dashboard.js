@@ -6,15 +6,37 @@ import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";
 import notifStyle from "./notifStyle.css";
+
 class Dashboard extends Component {
   render() {
-    const { publicTasks, notifications } = this.props;
+    const { publicTasks, notifications, auth } = this.props;
+    let warning = auth.isEmpty ? (
+      <p style={{ color: "pink" }}>
+        For personal ToDo App usage please
+        <a href="/signup">
+          <span style={{ color: "blue" }}> signup </span>
+        </a>
+        or
+        <a href="/login">
+          <span style={{ color: "blue" }}> login</span>
+        </a>
+      </p>
+    ) : (
+      <p style={{ color: "pink" }}>
+        For personal ToDo App usage please go to
+        <a href="/mytodo">
+          <span style={{ color: "blue" }}> myTodo</span>
+        </a>
+      </p>
+    );
 
     return (
       <div className={"mainDash"}>
         <div className="dashboard container">
-          <div style={{ marginTop: "10px" }} className="row">
+          <p className="mt-4 mb-0 pb-0" style={{ color: "pink" }}></p>
+          <div style={{ marginTop: "0px", paddingTop: "0" }} className="row">
             <div className="col">
+              {auth.isLoaded && warning}
               <PublicNewTaskForm></PublicNewTaskForm>
             </div>
           </div>
@@ -35,7 +57,7 @@ class Dashboard extends Component {
 const mapStateToProps = (state) => {
   return {
     publicTasks: state.firestore.ordered.publicTasks,
-    // auth: state.firebase.auth,
+    auth: state.firebase.auth,
     notifications: state.firestore.ordered.notifications,
   };
 };

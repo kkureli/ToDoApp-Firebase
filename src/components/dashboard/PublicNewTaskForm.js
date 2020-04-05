@@ -11,25 +11,25 @@ export class PublicNewTaskForm extends Component {
   state = {
     task: "",
     until: "",
-    name: "Anonymous"
+    name: "Anonymous",
   };
 
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState({
-      [e.target.id]: e.target.value
+      [e.target.id]: e.target.value,
     });
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
     this.props.createPublicTask(this.state);
   };
 
   render() {
     return (
-      <form onSubmit={e => this.handleSubmit(e)}>
+      <form style={{ marginTop: "0" }} onSubmit={(e) => this.handleSubmit(e)}>
         <TextField
-          onChange={event => this.handleChange(event)}
+          onChange={(event) => this.handleChange(event)}
           required
           id="task"
           label="Description"
@@ -37,19 +37,19 @@ export class PublicNewTaskForm extends Component {
 
         <TextField
           required
-          onChange={event => this.handleChange(event)}
+          onChange={(event) => this.handleChange(event)}
           id="until"
           label="Date"
           type="date"
           style={{ paddingLeft: "15px", paddingRight: "15px" }}
           InputLabelProps={{
-            shrink: true
+            shrink: true,
           }}
         />
         <TextField
           className={style.nameField}
           required
-          onChange={event => this.handleChange(event)}
+          onChange={(event) => this.handleChange(event)}
           label="Name"
           id="name"
           defaultValue="Anonymous"
@@ -62,13 +62,13 @@ export class PublicNewTaskForm extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {};
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    createPublicTask: taskObj => dispatch(createPublicTask(taskObj))
+    createPublicTask: (taskObj) => dispatch(createPublicTask(taskObj)),
   };
 };
 

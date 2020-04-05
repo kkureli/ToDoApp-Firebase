@@ -71,5 +71,6 @@ input[type="password"]:not(.browser-default):focus:not([readonly])+label {
 @media (max-width: 684px) {
     .dashboard {
         margin-top: 80px;
+        position: absolute;
     }
 }

@@ -1,0 +1,85 @@
+[debug] [2020-04-05T11:53:54.364Z] ----------------------------------------------------------------------
+[debug] [2020-04-05T11:53:54.366Z] Command:       /Users/kaan/.nvm/versions/node/v13.10.1/bin/node /Users/kaan/.nvm/versions/node/v13.10.1/bin/firebase deploy
+[debug] [2020-04-05T11:53:54.366Z] CLI Version:   8.0.1
+[debug] [2020-04-05T11:53:54.367Z] Platform:      darwin
+[debug] [2020-04-05T11:53:54.367Z] Node Version:  v13.10.1
+[debug] [2020-04-05T11:53:54.368Z] Time:          Sun Apr 05 2020 14:53:54 GMT+0300 (GMT+03:00)
+[debug] [2020-04-05T11:53:54.368Z] ----------------------------------------------------------------------
+[debug] [2020-04-05T11:53:54.368Z] 
+[debug] [2020-04-05T11:53:54.382Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-05T11:53:54.382Z] > authorizing via signed-in user
+[debug] [2020-04-05T11:53:54.383Z] [iam] checking project todo-app-38640 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-04-05T11:53:54.385Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-04-05T11:53:54.385Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-04-05T11:53:54.904Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Apr 2020 11:53:46 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-05T11:53:54.921Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/todo-app-38640:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-04-05T11:53:56.041Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Apr 2020 11:53:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=888","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-05T11:53:56.043Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/todo-app-38640  
+ 
+[debug] [2020-04-05T11:53:56.532Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Apr 2020 11:53:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'todo-app-38640'...
+[info] 
+[info] i  deploying functions, hosting
+[debug] [2020-04-05T11:53:58.085Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "dependencies": {
+    "firebase-admin": "^8.9.0",
+    "firebase-functions": "^3.3.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.1.6"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2020-04-05T11:53:58.086Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/todo-app-38640/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2020-04-05T11:53:58.087Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/todo-app-38640/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2020-04-05T11:53:59.055Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Apr 2020 11:53:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-05T11:53:59.302Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Apr 2020 11:53:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2020-04-05T11:53:59.303Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/todo-app-38640/adminSdkConfig  
+ 
+[debug] [2020-04-05T11:53:59.574Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Apr 2020 11:53:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-05T11:53:59.576Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/todo-app-38640/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-04-05T11:54:01.343Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Apr 2020 11:53:53 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2020-04-05T11:54:01.347Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/todo-app-38640/configs  
+ 
+[debug] [2020-04-05T11:54:01.874Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Apr 2020 11:53:53 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: packaged functions (27.52 KB) for uploading
+[debug] [2020-04-05T11:54:02.055Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/todo-app-38640/locations/us-central1/functions:generateUploadUrl  
+ 
+[debug] [2020-04-05T11:54:03.044Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Apr 2020 11:53:55 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-05T11:54:03.045Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-43b0e272-8a3e-4f82-88d1-c6e66fd73b3d/c5087e8d-382f-424f-b8f8-2e9579c8c8e0.zip?GoogleAccessId=service-216777376486@gcf-admin-robot.iam.gserviceaccount.com&Expires=1586089434&Signature=e7ZQ0Hwqs2I0dawsWZAxVlvC5j%2BloBZoyb2wEH4Yc%2BzLyEC2ZeerZyE8nPrDjkD4TP8KdK0P6DkvddXJyLkr%2F62Kva%2Bp4HzTkYvlPsImJ4XooPDJDHayueSgH7ixhQVO7JRbZgaJELc5L5AbwxNQKQuQGZXdxd4BDlzacZBuWWFX4Vw4GYyaGzJb8QyDLGhKCTQ3KjpxPbW1uEKwZUBCkT1LnGgK%2FIW2VSZjhQe2vO%2BzKNUrOePbPJ2NfH%2BCZkvscu6XJOxlrL4LD%2BOmzesy4b5LdoTklHN%2B%2BksP9F0ayA%2F%2FmNFXZNiHE1WvQmfyeUxMQXhifnokujTXxL416GV%2FMw%3D%3D  
+ <request body omitted>
+[debug] [2020-04-05T11:54:03.760Z] <<< HTTP RESPONSE 200 {"x-guploader-uploadid":"AEnB2UozVllM9YeNYEiId3hUAmRj_IbjG3-zvszZ5ExUuQIBW6j7O8qKS5SJB9M7jmYpCi9cScIlKZxgASvgvg5Vfr7v-18f0Q","etag":"\"dd92d7678f979289b610bf90ce6ef003\"","x-goog-generation":"1586087635704003","x-goog-metageneration":"1","x-goog-hash":"crc32c=CtQCXA==, md5=3ZLXZ4+Xkom2EL+Qzm7wAw==","x-goog-stored-content-length":"28177","x-goog-stored-content-encoding":"identity","vary":"Origin","content-length":"0","date":"Sun, 05 Apr 2020 11:53:55 GMT","server":"UploadServer","content-type":"text/html; charset=UTF-8","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000"}
+[info] ✔  functions: functions folder uploaded successfully
+[info] i  hosting[todo-app-38640]: beginning deploy...
+[info] i  hosting[todo-app-38640]: found 19 files in dist
+[debug] [2020-04-05T11:54:04.549Z] [hosting] hash cache [ZGlzdA] stored for 19 files
+[debug] [2020-04-05T11:54:04.550Z] [hosting][hash queue][FINAL] {"max":755,"min":12,"avg":62.36842105263158,"active":0,"complete":19,"success":19,"errored":0,"retried":0,"total":19,"elapsed":767}
+[debug] [2020-04-05T11:54:04.550Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/todo-app-38640/versions/70b9c29a76ef9f0e:populateFiles  
+ <request body omitted>
+[debug] [2020-04-05T11:54:06.024Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Apr 2020 11:53:57 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-05T11:54:06.029Z] [hosting][populate queue][FINAL] {"max":1478,"min":1478,"avg":1478,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1481}
+[debug] [2020-04-05T11:54:06.031Z] [hosting] uploads queued: 8
+[debug] [2020-04-05T11:54:08.606Z] [hosting][upload queue][FINAL] {"max":2581,"min":2043,"avg":2313.625,"active":0,"complete":8,"success":8,"errored":0,"retried":0,"total":8,"elapsed":2581}
+[info] ✔  hosting[todo-app-38640]: file upload complete
+[debug] [2020-04-05T11:54:08.607Z] [hosting] deploy completed after 4845ms

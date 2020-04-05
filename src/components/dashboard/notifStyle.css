@@ -11,23 +11,28 @@
 @media (max-width: 684px) {
     .section {
         /* display: block; */
-        left: -650px;
         width: 100vh;
         height: 20vh !important;
         overflow-y: scroll;
+        position: absolute;
+        right: -10px;
+        top: -20px;
+        ;
     }
     .not-title {
         display: none !important;
     }
     .notUL {
         height: 0;
-        top: 0;
-        left: 100px;
+        width: 100%;
+        left: 14%;
         position: absolute;
+        top: -5%
     }
     .notCard {
         height: 50vh !important;
         margin-bottom: 0px;
         padding-bottom: 0px;
+        width: 100%;
     }
 }
